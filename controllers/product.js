@@ -87,7 +87,7 @@ exports.deleteProductById = (async(req,res)=>{
             });
         }else{
             console.log('Error deleting the product', error);
-            return res.status(404).json({msg:'Error deleting the product'})
+            return res.status(404).json({message:'Error deleting the product'})
         }
     }).catch(err => {
         console.log("No Product Found", err);

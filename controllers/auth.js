@@ -37,7 +37,7 @@ exports.login = ((req,res)=>{
               if (!validPass) { res.status(400).json({message:'Invalid Password'})}
               
               // create token 
-              const token = jwt.sign({clientId:userData.id,clientName:userData.username},'UdayParMarSecrateKey',{expiresIn:'1h'});
+              const token = jwt.sign({clientId:userData.id,clientName:userData.username},process.env.MySecreteKey,{expiresIn:'1h'});
 
 
               //send it as response along with user data
