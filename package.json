@@ -1,0 +1,32 @@
+{
+  "name": "radixnode",
+  "version": "1.0.0",
+  "description": "Building a Product Module With Node Js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/UdayParmar24/radixnode.git"
+  },
+  "author": "Uday Parmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UdayParmar24/radixnode/issues"
+  },
+  "homepage": "https://github.com/UdayParmar24/radixnode#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.3"
+  }
+}
