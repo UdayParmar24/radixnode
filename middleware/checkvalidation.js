@@ -41,6 +41,8 @@ module.exports.productAddValidation = [
     body('name').not().isEmpty().withMessage('Name required')
         .not().isAlphanumeric().withMessage('Name must be Alphanumeric'),
     body("price").not().isEmpty().withMessage('Price required'),
+    body("description").isLength({ max: 255 }).withMessage('Max 255 Characters are allowed'),
+    body('type').isIn(['print', 'promotional']).withMessage('Please enter valid value from [print, promotional].'),
     // .not().isDecimal().withMessage('Price Must be Decimal'),
     async (req, res, next) =>{
          const errors = validationResult(req);
@@ -55,6 +57,7 @@ module.exports.productEditValidation = [
     body('name').not().isEmpty().withMessage('Name required')
         .not().isAlphanumeric().withMessage('Name must be Alphanumeric'),
     body("price").not().isEmpty().withMessage('Price required'),
+    body("description").isLength({ max: 255 }).withMessage('Max 255 Characters are allowed'),
     // .not().isDecimal().withMessage('Price Must be Decimal'),
     async (req, res, next) =>{
          const errors = validationResult(req);

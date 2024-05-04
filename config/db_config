@@ -1,8 +1,8 @@
 const sequelize = require('sequelize');
-var db = new sequelize('nodeexam','root','deep70',
+var db = new sequelize(process.env.DB_NAME,process.env.DB_USER,process.env.DB_PASS,
     {
         dialect:'mysql',
-        host:'localhost'
+        host:process.env.DB_HOST
     }
 );
 

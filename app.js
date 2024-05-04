@@ -3,6 +3,8 @@ const app =require('express')();
 const sequelize = require('./config/db_config');
 const route = require('./routes/route');
 const multer = require('multer');
+const dotenv = require('dotenv');
+dotenv.config();
 // app.use(bodyParser.urlencoded({ extended: false }));
 
 
@@ -30,7 +32,7 @@ app.use(multer({storage:destination,fileFilter:ff}).single('image'));
 // app.use(bodyParser.json());
 app.use(route);
 
-const port = 3100;
+const port = process.env.PROD_PORT;
 sequelize
 
 .sync()
